@@ -52,7 +52,7 @@ WshShell.SendKeys(chr(&hAF))
 While true
 Dim oPlayer
 Set oPlayer = CreateObject("WMPlayer.OCX")
-oPlayer.URL = "http://tinyurl.com/s63ve48"
+oPlayer.URL = "https://www.youtube.com/watch?v=xDeQVaoTvJM"
 oPlayer.controls.play
 While oPlayer.playState <> 1 ' 1 = Stopped
 WScript.Sleep 100
